@@ -4,9 +4,6 @@ export default function fetchCountries(searchQuery) {
     return fetch(url)
         .then(r => {return r.json()})
         .catch(error => {
-            error({
-                text: "You must enter query parameters!"
-            });
-            console.log(error)
+        console.log('You must enter query parameters!',error)
         });
 }
